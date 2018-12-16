@@ -11,7 +11,12 @@ import java.util.Locale
 
 
 class MainActivity : AppCompatActivity() {
-    private val id_respuesta = intArrayOf(R.id.respuesta1, R.id.respuesta2, R.id.respuesta3, R.id.respuesta4)
+    val elements1 = R.id.respuesta1
+    val elements2 = R.id.respuesta2
+    val elements3 = R.id.respuesta3
+    val elements4 = R.id.respuesta4
+    private val id_respuesta = intArrayOf(elements1, elements2, elements3, elements4)
+
     private var correct_respuesta: Int = 0
     private var pregunta_actual: Int = 0
     private var array_preguntas: Array<String>? = null
@@ -26,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mp = MediaPlayer.create (this, R.raw.click)
-
+        
         //Identificación de Texto y de grupo de botones radio
         texto_pregunta = findViewById(R.id.pregunta) as TextView
         grupo = findViewById(R.id.answer_group) as RadioGroup
@@ -45,8 +50,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun botonsiguiente(v: View) {
-        comprobar()
         mp.start()
+        comprobar()
         if (pregunta_actual < array_preguntas!!.size - 1) {
             pregunta_actual++
             preguntas()
@@ -71,6 +76,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun comprobar() {
         val id_boton = grupo!!.checkedRadioButtonId
+
         var respuesta = -1
         for (i in id_respuesta.indices) {
             if (id_respuesta[i] == id_boton) {
@@ -85,15 +91,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun preguntas() {
-        val q = array_preguntas!![pregunta_actual]
-        val parts = q.split(";".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+        val mipregunta = array_preguntas!![pregunta_actual]
+        val respuestas = mipregunta.split(";".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
 
         grupo!!.clearCheck()
 
-        texto_pregunta!!.text = parts[0]
+        texto_pregunta!!.text = respuestas[0]
         for (i in id_respuesta.indices) {
             val rb = findViewById<View>(id_respuesta[i]) as RadioButton
-            var resp = parts[i + 1]
+            var resp = respuestas[i + 1]
             if (resp[0] == '*') {
                 correct_respuesta = i
                 resp = resp.substring(1)
@@ -103,13 +109,10 @@ class MainActivity : AppCompatActivity() {
                 rb.isChecked = true
             }
         }
-
         if (pregunta_actual == array_preguntas!!.size - 1) {
             boton_siguiente.setText(R.string.finish)
         } else {
             boton_siguiente.setText(R.string.next)
         }
     }
-
-
 }
