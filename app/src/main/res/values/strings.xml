@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">My Tests</string>
+    <string name="question">Question</string>
+    <string name="check">Check</string>
+    <string name="correct">Very good!</string>
+    <string name="incorrect">Incorrect...</string>
+    <string name="next">Next</string>
+    <string name="finish">Finish</string>
+    <string name="prev">Previous</string>
+    <string name="pregunta">answer</string>
+    <string name="radiobutton" translatable="false">Mis respuestas</string>
+    <string name="siguiente">Next</string>
+    <string name="salir_del_programa">Exit program</string>
+    <string name="resultados">Results</string>
+    <string name="textoresultado" translatable="false">TextView</string>
+
+
+    <array name="array_preguntas">
+        <item> The transmission speed in USB 3.0 is:;50 Mbits/s;500 Mbits/s;*5000 Mbits/s;50000 Mbits/s</item>
+         <item> The IEEE has defined a specification for wireless local networks called _______, which covers the
+             physical and liaison level:;IEEE 802.3;IEEE 802.5;*IEEE 802.11;IEEE 802.12</item>
+         <item> In the Von Neuman architecture:;the main blocks are the UC;the ALU and the CPU.;*The program is
+             finds memory resident;Records are in main memory.;System Design Operative.</item>
+         <item> The core of a Vlan is:;*A Switch;A router;A bridge;A PLC</item>
+         <item> Linux is an operating system:;Mono-user and multitasking;*Multi-user and multitasking;Mono-user and monotasking;Mono-user</item>
+
+    </array>
+
+</resources>

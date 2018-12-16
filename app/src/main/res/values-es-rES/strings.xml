@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mis Tests</string>
+    <string name="question">Pregunta</string>
+    <string name="check">Verificar</string>
+    <string name="correct">Muy bien!</string>
+    <string name="incorrect">Incorrecta...</string>
+    <string name="next">Siguiente</string>
+    <string name="finish">Fin</string>
+    <string name="prev">Anterior</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="salir_del_programa">Salir del programa</string>
+    <string name="resultados">Resultados</string>
+    <string name="pregunta">pregunta</string>
+
+    <array name="array_preguntas">
+        <item>La velocidad de transmisión en USB 3.0 es de:;50 Mbits/s;500 Mbits/s;*5000 Mbits/s;50000 Mbits/s</item>
+        <item>El IEEE ha definido una especificación para redes locales inalámbricas denominado _______, que cubre el
+            nivel físico y de enlace:;IEEE 802.3;IEEE 802.5;*IEEE 802.11;IEEE 802.12</item>
+        <item>En la arquitectura Von Neuman;Los bloques principales son la UC, la ALU y la CPU.;*El programa se
+            encuentra residente en memoria.;Los registros se encuentran en la memoria principal.;Diseño de un Sistema
+            Operativo;Los registros se encuentran en la memoria principal.</item>
+        <item>El núcleo de una Vlan es:;*Un Switch.;Un router;Un bridge.;Un PLC</item>
+        <item>Linux es un sistema operativo:;Monousuario y multitarea;*Multiusuario y multitarea.;Multiusuario y
+            monotarea.;Monousuario</item>
+    </array>
+</resources>
